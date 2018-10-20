@@ -25,8 +25,9 @@ def funTest(f, x):
     print("loop count = ", "  elapsed time = ", (time.clock() - start))
     return;
 ################################################################################
-#print('Selection Sort')
-#testlist = random.sample(range(100000), 100000)
+timeData = [10,100,1000,5000,10000,20000,30000,40000, 70000,100000]
+print('Selection Sort')
+testlist = random.sample(range(100000), 10)
 #shuffled_selectionset = filetoList("shuffled.txt")
 #sorted_selectionset = filetoList("sorted.txt")
 #nearly_sorted_selectionset = filetoList("nearly-sorted.txt")
@@ -35,8 +36,11 @@ def funTest(f, x):
 #duplicate_selectionset = filetoList("duplicate.txt")
 #one_million_randoms_selectionset = filetoList("one-million-randoms.txt")
 
-#print("Test sample")
-#funTest(sorts.selectionSort,testlist)
+print("Test sample")
+for n in timeData:
+    testlist = random.sample(range(100000), n)
+    funTest(sorts.selectionSort_py,testlist)
+funTest(sorts.selectionSort_py,testlist)
 #print("shuffled")
 #funTest(sorts.selectionSort, shuffled_selectionset)
 #print("sorted")
@@ -134,14 +138,14 @@ def funTest(f, x):
 #funTest(sorts.bubbleSort,one_million_randoms_bubbleset)
 ################################################################################
 #
-print('Merge Sort')
+#print('Merge Sort')
 #shuffled_set = filetoList("shuffled.txt")
 #sorted_set = filetoList("sorted.txt")
 #nearly_sorted_set = filetoList("nearly-sorted.txt")
 #unsorted_set = filetoList("unsorted.txt")
 #nearly_unsorted_set = filetoList("nearly-unsorted.txt")
 #duplicate_set = filetoList("duplicate.txt")
-one_million_randoms_mergeset = filetoList("one-million-randoms.txt")
+#one_million_randoms_mergeset = filetoList("one-million-randoms.txt")
 #
 #print("shuffled")
 #funTest(sorts.mergeSort, shuffled_set)
@@ -155,19 +159,19 @@ one_million_randoms_mergeset = filetoList("one-million-randoms.txt")
 #funTest(sorts.mergeSort, nearly_unsorted_set)
 #print("duplicate")
 #funTest(sorts.mergeSort, duplicate_set)
-print("one-million-randoms")
-funTest(sorts.mergeSort, one_million_randoms_mergeset)
+#print("one-million-randoms")
+#funTest(sorts.mergeSort, one_million_randoms_mergeset)
 
 ################################################################################
 #
-print('Bucket Sort')
+#print('Bucket Sort')
 #shuffled_set = filetoList("shuffled.txt")
 #sorted_set = filetoList("sorted.txt")
 #nearly_sorted_set = filetoList("nearly-sorted.txt")
 #unsorted_set = filetoList("unsorted.txt")
 #nearly_unsorted_set = filetoList("nearly-unsorted.txt")
 #duplicate_set = filetoList("duplicate.txt")
-one_million_randoms_bucketset = filetoList("one-million-randoms.txt")
+#one_million_randoms_bucketset = filetoList("one-million-randoms.txt")
 
 #print("shuffled")
 #funTest(sorts.bucketSort,shuffled_set)
@@ -181,7 +185,7 @@ one_million_randoms_bucketset = filetoList("one-million-randoms.txt")
 #funTest(sorts.bucketSort,nearly_unsorted_set)
 #print("duplicate")
 #funTest(sorts.bucketSort,duplicate_set)
-print("one-million-randoms")
-funTest(sorts.bucketSort,one_million_randoms_bucketset)
+#print("one-million-randoms")
+#funTest(sorts.bucketSort,one_million_randoms_bucketset)
 #
 ################################################################################
